@@ -9,3 +9,4 @@ class Gym(models.Model):
     name= models.CharField(max_length=140)
     description = models.TextField()
     address = models.CharField(max_length=140)
+    price_per_night = models.PositiveBigIntegerField()
