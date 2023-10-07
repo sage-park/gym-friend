@@ -10,3 +10,6 @@ class Gym(models.Model):
     description = models.TextField()
     address = models.CharField(max_length=140)
     price_per_night = models.PositiveBigIntegerField()
+
+    def __str__(self):
+        return self.name
