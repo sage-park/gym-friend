@@ -10,6 +10,7 @@ class Gym(models.Model):
     description = models.TextField()
     address = models.CharField(max_length=140)
     price_per_night = models.PositiveBigIntegerField()
+    owner = models.ForeignKey("users.User", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
