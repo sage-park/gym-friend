@@ -37,6 +37,8 @@ CUSTOM_APPS = [
     "reviews.apps.ReviewsConfig",
     "bookings.apps.BookingsConfig",
     "memberships.apps.MembershipsConfig",
+    "medias.apps.MediasConfig",
+    "direct_messages.apps.DirectMessagesConfig",
 ]
 
 SYSTEM_APPS = [

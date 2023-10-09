@@ -1,8 +1,6 @@
 from django.db import models
 from common.models import CommonModel
 
-# Create your models here.
-
 class Gym(CommonModel):
 
     """Modle Definition for Gym"""
@@ -13,8 +11,14 @@ class Gym(CommonModel):
     name= models.CharField(max_length=140)
     description = models.TextField()
     address = models.CharField(max_length=140)
-    price_per_night = models.PositiveBigIntegerField()
-    owner = models.ForeignKey("users.User", on_delete=models.CASCADE)
+
+    price_per_night = models.PositiveBigIntegerField(null=True)
+    price_per_month = models.PositiveIntegerField(null=True)
+    price_per_Three_month = models.PositiveIntegerField(null=True)
+    price_per_Six_month = models.PositiveIntegerField(null=True)
+    price_per_year = models.PositiveBigIntegerField(null=True)
+
+    owner = models.ForeignKey("users.User", on_delete=models.CASCADE, null=True)
 
     amenities = models.ManyToManyField("gyms.Amenity", blank=True)
 
