@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 CUSTOM_APPS = [
     "gyms.apps.GymsConfig",
     "users.apps.UsersConfig",
+    "common.apps.CommonConfig",
 ]
 
 SYSTEM_APPS = [

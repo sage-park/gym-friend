@@ -1,8 +1,9 @@
 from django.db import models
+from common.models import CommonModel
 
 # Create your models here.
 
-class Gym(models.Model):
+class Gym(CommonModel):
 
     """Modle Definition for Gym"""
 
@@ -15,10 +16,12 @@ class Gym(models.Model):
     price_per_night = models.PositiveBigIntegerField()
     owner = models.ForeignKey("users.User", on_delete=models.CASCADE)
 
+    amenities = models.ManyToManyField("gyms.Amenity", blank=True)
+
     def __str__(self):
         return self.name
 
-class Amenity(models.Model):
+class Amenity(CommonModel):
 
     """ Amenity Definition """
 
