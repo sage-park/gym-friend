@@ -34,6 +34,9 @@ CUSTOM_APPS = [
     "gyms.apps.GymsConfig",
     "users.apps.UsersConfig",
     "common.apps.CommonConfig",
+    "reviews.apps.ReviewsConfig",
+    "bookings.apps.BookingsConfig",
+    "memberships.apps.MembershipsConfig",
 ]
 
 SYSTEM_APPS = [
