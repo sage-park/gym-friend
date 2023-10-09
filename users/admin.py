@@ -8,7 +8,17 @@ class CustomUserAdmin(UserAdmin):
        (
            "Profile",
             {
-                "fields": ("username", "password", "name", "email", "is_host")
+                "fields": (
+                    "avatar",
+                    "username",
+                    "password", 
+                    "name", 
+                    "email", 
+                    "is_host",
+                    "gender",
+                    "language",
+                    "currency"
+                )
             },
         ),
         (
@@ -35,4 +45,9 @@ class CustomUserAdmin(UserAdmin):
 
     )
 
-    list_display = ("username", "email", "name", "is_host")
+    list_display = (
+        "username",
+        "email",
+        "name",
+        "is_host"
+    )
